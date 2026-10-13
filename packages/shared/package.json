@@ -1,0 +1,48 @@
+{
+  "name": "@neutron-ai/shared",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Shared public API types for Neutron AI memory SDKs.",
+  "license": "Apache-2.0",
+  "homepage": "https://neutronai.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neutronai-dev/sdk-js.git",
+    "directory": "packages/shared"
+  },
+  "bugs": {
+    "url": "https://github.com/neutronai-dev/sdk-js/issues"
+  },
+  "keywords": ["neutron-ai", "memory", "agents", "typescript"],
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm build",
+    "prepublishOnly": "pnpm test"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}

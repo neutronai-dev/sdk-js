@@ -1,0 +1,67 @@
+{
+  "name": "@neutron-ai/sdk",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Public TypeScript SDK, provider connectors, and MCP helpers for Neutron AI memory.",
+  "license": "Apache-2.0",
+  "homepage": "https://neutronai.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neutronai-dev/sdk-js.git",
+    "directory": "packages/sdk-ts"
+  },
+  "bugs": {
+    "url": "https://github.com/neutronai-dev/sdk-js/issues"
+  },
+  "keywords": ["neutron-ai", "memory", "mcp", "agents", "typescript"],
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./connectors": {
+      "types": "./dist/connectors.d.ts",
+      "import": "./dist/connectors.js"
+    },
+    "./mcp": {
+      "types": "./dist/mcp.d.ts",
+      "import": "./dist/mcp.js"
+    },
+    "./obsidian": {
+      "types": "./dist/obsidian.d.ts",
+      "import": "./dist/obsidian.js"
+    },
+    "./providers": {
+      "types": "./dist/providers.d.ts",
+      "import": "./dist/providers.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm build",
+    "prepublishOnly": "pnpm test"
+  },
+  "dependencies": {
+    "@neutron-ai/shared": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}
