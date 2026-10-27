@@ -1,6 +1,6 @@
 {
   "name": "@neutron-ai/sdk",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Public TypeScript SDK, provider connectors, and MCP helpers for Neutron AI memory.",
   "license": "Apache-2.0",

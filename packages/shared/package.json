@@ -1,6 +1,6 @@
 {
   "name": "@neutron-ai/shared",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Shared public API types for Neutron AI memory SDKs.",
   "license": "Apache-2.0",
