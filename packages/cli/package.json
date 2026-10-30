@@ -1,6 +1,6 @@
 {
   "name": "@neutron-ai/cli",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": false,
   "description": "Cross-platform command line interface for Neutron AI memory and MCP operations.",
   "license": "Apache-2.0",
